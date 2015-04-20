@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Nebulab | Contextual data management for life scientists</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="author" content="Nebulab">
+	<meta name="description" content="Nebulab is a web application that allows you to store, organize and collaborate on scientific data.">
+	<!-- load CSS -->
+	<link href="style.css" rel="stylesheet">
+	<!-- load jQuery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	<!-- load font awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- load favicon -->
+	<link rel="shortcut icon" type="image/ico" href="/images/favicon.ico">
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!-- begin Windows Mobile viewport patch -->
+	<script>
+	(function() {
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+	})();
+	</script>
+	<!-- end Windows Mobile viewport patch -->
+	<!-- load Typekit -->
+	<script src="//use.typekit.net/huy4bfv.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	<!-- end Typekit script -->
+</head>
+
+<body>
+	<dialog id="requestBetaSubmitted">  
+		<p>Thank you for your request!</p>     
+	</dialog> 
+
+	<header role="banner">
+		<div class="wrapper wrapper-pads">
+			<a class="logo" href="/"><img src="images/identity_horizontal@2x.png"></a>
+		</div>
+	</header>
+	
+	<div class="hero-valueprop">
+		<div class="wrapper wrapper-pads">
+			<div class="hero-valueprop-text">
+
+				<h1>Contextual data management for life scientists</h1>
+				<p>Find your data fast. Understand it when you do.</p>
+
+				<a href="#requestBetaModal" id="requestBeta" class="btn request-beta-btn">Request Private Beta</a> 
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="mission">
+		<div class="wrapper wrapper-pads">
+			<h2>Our Mission</h2>
+			<p>We believe that scientists should have tools to manage their data that are as sophisticated as the ones they use to manage their music. Researchers should be focused on research&mdash; not digging through their records. The more intelligible and discoverable data is, the more accelerated the research process can be. The future of scientific research depends on a collaborative community around smart, organized data. We&rsquo;re here to build it.</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="value-props">
+		<div class="wrapper wrapper-pads">
+			<div class="value-prop-headline">
+				<h1>Your research is complicated.<br> Managing it shouldn&rsquo;t be.</h1>
+				<p>Our simple, intuitive interface is modeled after your favorite consumer apps and designed to accomodate your existing workflows.</p>
+			</div>
+
+			<div class="value-prop-bullets">
+				<div class="value-prop">
+					<div class="vp-icon">
+						<img src="images/goggles@2x.png" id="goggles">
+					</div>
+					<div class="vp-text">
+						<h3>Intelligible and searchable</h3>
+						<p>Make your data smarter and easier to find by keeping all of a file&rsquo;s relevant context in one place. Document the details of your experiement with tags, comments, links and attachments.</p>
+					</div>
+				</div>
+
+				<div class="value-prop">
+					<div class="vp-icon">
+						<img src="images/collab@2x.png" id="collab">
+					</div>
+					<div class="vp-text">
+						<h3>Share data with your peers</h3>
+						<p>Store and share your data in the same place. Invite collaborators to view and comment on individual files or entire projects with a click of a button.</p>
+					</div>
+				</div>
+
+				<div class="value-prop">
+					<div class="vp-icon">
+						<img src="images/storage@2x.png" id="storage">
+					</div>
+					<div class="vp-text">
+						<h3>Use your existing storage</h3>
+						<p>Our platform is currently built direclty over Dropbox, syncing files in real-time from your Dropbox to your Nebulab. You have control of your files, we just make them more intelligent. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="secondary-cta">
+		<div class="wrapper wrapper-pads">
+			<h2>Need a better data management solution?</h2>
+			<p>We&rsquo;re here to help you. Sign up for our private beta and start syncing your files today.</p>
+
+			<a href="#requestBetaModal" id="requestBeta" class="btn request-beta-btn">Request Private Beta</a>
+		</div>
+	</div>
+
+	<footer role="contentinfo">
+		<div class="footer-content wrapper wrapper-pads">				
+			<div class="company-info">
+				<p class="company-address">
+					<a href="mailto:hello@nebulab.io">hello@nebulab.io</a><br>
+					<i class="fa fa-map-marker"></i> Geekdom<br>
+					110 East Houston, 7th Floor<br>
+					San Antonio, TX 78205</p>
+				<ul class="social">
+					<li><a href="https://twitter.com/nebulab_io"><i class="fa fa-twitter"></i></a></li>
+				</ul>
+			</div>
+			<div class="shoutouts">
+				<img class="techstars-logo" src="images/techstars_logo.png" alt="Nebulab is a Techstars Company">
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Modal -->
+	<div id="requestBetaModal" rel="leanModal">
+		<h3>Contact Info</h3>
+	 	<form id="contact-form" role="form" onSubmit="validate(); return false;">
+			<input type="text" id="first_name" name="first_name" placeholder="First name" required autofocus>
+			
+			<input type="text" id="last_name" name="last_name" placeholder="Last name" required>
+
+			<input type="email" id="email" name="email" placeholder="rattusnorvegicus@nebulab.io" required>
+			<p id="error-message"></p>
+
+			<button class="btn" type="submit">Request Private Beta</button>
+		</form>
+
+		<a href="#" class="modal_close"><i class="fa fa-times"></i></a>
+	</div>
+	<!-- /Modal -->
+
+
+<script src="https://cdn.appbase.io/latest/appbase.js"></script>
+<script src="js/jquery.leanModal.min.js"></script>
+<script src="js/nebulab.js"></script>
+
+<script>
+	//Google Analytics snippet
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-49389743-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+</body>
