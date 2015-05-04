@@ -568,7 +568,7 @@ footer[role=contentinfo] {
 ----------------------------------------------------------------------------*/
 
 .hero-valueprop {
-	padding: 5.625em 0;
+	padding: 2.625em 0;
 	position: relative;
 }
 .hero-valueprop .wrapper {
@@ -588,7 +588,15 @@ footer[role=contentinfo] {
 	letter-spacing: 0.025em;
 	margin-bottom: 2.25em;
 }
+@media only screen and ( min-width: 71.25em ) {
+	.hero-valueprop-text {
+		 margin-left: 11.5em;
+	}
+}
 @media only screen and ( min-width: 34.5em ) {
+	.hero-valueprop {
+		padding: 5.625em 0;
+	}
 	.hero-valueprop-text p {
 		font-size: 1.5em;
 	}
@@ -617,11 +625,11 @@ footer[role=contentinfo] {
 ----------------------------------------------------------------------------*/
 
 .value-props {
-	margin: 5.25em 0;
+	margin: 2.625em 0;
 }
 .value-props .wrapper {
 	border-bottom: 1px dashed #ABA8AC;
-	padding-bottom: 5.25em;
+	padding-bottom: 2.625em;
 }
 .value-prop-headline {
 	background-color: #4FAA90;
@@ -646,7 +654,7 @@ footer[role=contentinfo] {
 .value-prop {
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 3.25em;
+	margin-bottom: 2.625em;
 }
 .vp-icon {
 	display: inline-block;
@@ -672,8 +680,14 @@ footer[role=contentinfo] {
 	width: 48px;
 }
 @media only screen and ( min-width: 34.5em ) {
+	.value-props {
+		margin: 5.625em 0;
+	}
+	.value-prop-headline {
+		margin-bottom: 5.625em;
+	}
 	.value-prop {
-		margin-bottom: 5.25em;
+		margin-bottom: 5.625em;
 	}	
 	.vp-icon {
 		width: 20%;
@@ -699,7 +713,7 @@ footer[role=contentinfo] {
 		margin-left: 10%;
 	}
 	.value-prop-headline {
-		padding: 5.25em;
+		padding: 5.625em;
 	}
 }
 @media only screen and ( min-width: 71.625em ) {
@@ -708,6 +722,7 @@ footer[role=contentinfo] {
 		width: 50%;
 	}
 	.value-prop-bullets {
+		padding-top: 5.625em;
 		width: 50%;
 	}
 }
@@ -839,22 +854,20 @@ footer[role=contentinfo] {
 
 /*----------------------------------------------------------------------------
 
-   requestBetaSubmitted dialog/modal
+   Beta Request Confirmation page
 
 ----------------------------------------------------------------------------*/
 
-dialog#requestBetaSubmitted {
-	background-color: #433F57;
-	border: none;
-	color: #fff;
-	display: none;
-	opacity: 0.8;
-	padding: 0.5em;
-	top: 0px;
-	text-align: center;
-	width: 100%;
-	z-index: 11;
+.brainy-quote {
+	margin: 0 auto;
+  	max-width: 47em;
+  	padding: 5.625em 0;
+  	text-align: center;
 }
+.brainy-quote .wrapper {
+	padding-bottom: 2.625em;
+}
+
 
 /*----------------------------------------------------------------------------
 
