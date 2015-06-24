@@ -21,7 +21,7 @@
 }(document));
 
 
-(function() {
+(function() {	
 	// modal trigger
 	$(".request-beta-btn").leanModal({ 
 		overlay : 0.4, 
@@ -29,24 +29,6 @@
 	});
  
 })();
-
-// resize teal block
-$(window).on('load',function(e){
-    if (window.innerWidth > 1146) {
-		h2 = $('.value-prop-bullets').height() - 168;
-		$('.value-prop-headline').height(h2);
-	} else {
-		$('.value-prop-headline').height('inherit');
-	}
-});
-$(window).on('resize',function(e){
-    if (window.innerWidth > 1146) {
-		h2 = $('.value-prop-bullets').height() - 168;
-		$('.value-prop-headline').height(h2);
-	} else {
-		$('.value-prop-headline').height('inherit');
-	}
-});
 
 
 // move sign up modal if 2nd cta is clicked
@@ -57,3 +39,54 @@ $('.btn-cta-2').click(function() {
 		$('#requestBetaModal').css('top', '2360px');
 	}
 });
+
+// responsive equal height rows by @micahgodbolt - codepen.io/micahgodbolt/pen/FgqLc
+equalheight = function(container) {
+
+	var currentTallest  = 0,
+	    currentRowStart = 0,
+	    rowDivs         = new Array(),
+	    $el,
+	    topPosition     = 0;
+	
+	$(container).each(function() {
+	
+		$el = $(this);
+		$($el).height('auto')
+		topPostion = $el.position().top;
+		
+		if (currentRowStart != topPostion) {
+			
+			for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+				rowDivs[currentDiv].height(currentTallest);
+			}
+		
+			rowDivs.length  = 0; // empty the array
+			currentRowStart = topPostion;
+			currentTallest  = $el.height();
+			rowDivs.push($el);
+			
+		} else {
+		
+			rowDivs.push($el);
+			currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+			
+		}
+		
+		for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+			rowDivs[currentDiv].height(currentTallest);
+		}
+		
+	});
+
+}
+
+$(window).load(function() {
+	equalheight('.value-prop');
+});
+
+
+$(window).resize(function() {
+	equalheight('.value-prop');
+});
+

@@ -8,9 +8,6 @@
 	<meta name="description" content="Nebulab is a web application that allows you to store, organize and collaborate on scientific data.">
 	<!-- load CSS -->
 	<link href="style.css" rel="stylesheet">
-	<!-- load jQuery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 	<!-- load font awesome -->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<!-- load favicon -->
@@ -19,6 +16,11 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<!-- begin Windows Mobile viewport patch -->
+	<!--[if lt IE 9]>
+		<script>
+		document.createElement('video');
+		</script>
+	<![endif]-->
 	<script>
 	(function() {
 		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -47,72 +49,96 @@
 
 	<main role="main">	
 		<div class="hero-valueprop">
+			<video autoplay loop poster="images/abstract_cells@2x.jpg" id="bgvid">
+				<source src="videos/hero_video_final.mp4" type="video/mp4">
+			</video>
 			<div class="wrapper wrapper-pads">
 				<div class="hero-valueprop-text">
 
 					<h1>Contextual data management for life scientists</h1>
-					<p>Find your data fast. Understand it when you do.</p>
+					<p>Your research is complicated&mdash; managing it shouldn&rsquo;t be</p>
 
-					<a href="#requestBetaModal" id="requestBeta" class="btn-cta request-beta-btn">Request Private Beta</a> 
+					<a href="#requestBetaModal" id="requestBeta" class="btn request-beta-btn tour-1">Request Private Beta</a> 
 					
 				</div>
 			</div>
 		</div>
 
-		<div class="mission">
+		<div class="pain-point">
 			<div class="wrapper wrapper-pads">
-				<h2>Our Mission</h2>
-				<p>We believe that scientists should have tools to manage their data that are as sophisticated as the ones they use to manage their photos and music. The more intelligible, verifiable and discoverable data is, the more accelerated the research process can be. The future of scientific research depends on a collaborative community around smart, organized data. We&rsquo;re here to build it.</p>
+				<div class="pain-point-content">
+						<p>Keeping track of mRNA data, DNA data, Westerns, microscopy images, protocols, inventory, manuscripts, and presentations is a difficult when you&rsquo;re busy doing your research.
+						</p>
+				</div>
 			</div>
 		</div>
 
-		<hr>
 
 		<div class="value-props">
 			<div class="wrapper wrapper-pads">
 				<div class="value-prop-headline">
-					<h1>Your research is complicated&mdash; managing it shouldn&rsquo;t be.</h1>
-					<p>Our simple, intuitive interface is modeled after your favorite consumer apps and designed to accomodate your existing workflows.</p>
+					<h2>A simple solution to a messy problem</h2>
+					<p>Nebulab allows you to add meaningful context to your files making them easier to search for and smarter when shared.</p>
 				</div>
+
+				<hr>
 
 				<div class="value-prop-bullets">
+
 					<div class="value-prop">
 						<div class="vp-icon">
-							<img src="images/goggles@2x.png" id="goggles">
+							<img class="vp-icon-lg" src="images/lightbulb@2x.jpg">
+							<img class="vp-icon-sm" src="images/lightbulb@2x.jpg">
 						</div>
 						<div class="vp-text">
-							<h3>Intelligible and searchable</h3>
-							<p>Make your data smarter and easier to find by adding tags, comments, links and attachments. All of a file&rsquo;s relevant context is where it should be&mdash; with the file.</p>
+							<h3>Intelligible files</h3>
+							<p>Keep all of a file&rsquo;s relevant context in one place by adding tags, comments, and referances to other files and external links.
+							</p>
 						</div>
 					</div>
 
 					<div class="value-prop">
 						<div class="vp-icon">
-							<img src="images/collab@2x.png" id="collab">
+							<img class="vp-icon-lg" src="images/goggles@2x.jpg">
+							<img class="vp-icon-sm" src="images/goggles@2x.jpg">
 						</div>
 						<div class="vp-text">
-							<h3>Share data with your peers</h3>
-							<p>Store and share your data in the same place. Invite collaborators to view and comment on individual files or entire projects with a click of a button.</p>
+							<h3>Smarter search</h3>
+							<p>Find your files based on their added context, not by digging through folders for a cryptic file name.</p>
 						</div>
 					</div>
 
 					<div class="value-prop">
 						<div class="vp-icon">
-							<img src="images/storage@2x.png" id="storage">
+							<img class="vp-icon-lg" src="images/collab@2x.jpg">
+							<img class="vp-icon-sm" src="images/collab@2x.jpg">
 						</div>
 						<div class="vp-text">
-							<h3>Use your existing storage</h3>
-							<p>Our platform is currently built direclty over Dropbox, syncing files in real&ndash;time from your Dropbox to your Nebulab. You have control of your files, we just make them more intelligent. </p>
+							<h3>Collaborate with your peers</h3>
+							<p>Share files and their context with the click of a button and have conversations about your work in the file&rsquo;s comment thread.</p>
+						</div>
+					</div> 
+
+					<div class="value-prop">
+						<div class="vp-icon">
+							<img class="vp-icon-lg" src="images/dropbox_logo@2x.jpg">
+							<img class="vp-icon-sm" src="images/dropbox_logo@2x.jpg">
+						</div>
+						<div class="vp-text">
+							<h3>Use you existing storage</h3>
+							<p>Our platform is currently built direclty over your Dropbox storage, syncing files in real&ndash;time from your Dropbox to your Nebulab.</p>
+							<p><small>Don't use Dropbox and want to see other integrations? <a href="https://docs.google.com/forms/d/1FSF0TNLQ40cjkOEGw_R2p1x57nVO_NelFGtxVsQ9Zc4/viewform?usp=send_form" target="_blank">Tell us!</a></small></p>
 						</div>
 					</div>
+
 				</div>
+				
 			</div>
 		</div>
 
 		<div class="secondary-cta">
 			<div class="wrapper wrapper-pads">
-				<h2>Need a better data management solution?</h2>
-				<p>Sign up for our private beta today and start making your research files more intelligible, verifiable and discoverable.</p>
+				<h3>Be a part of our <strong>free</strong> private beta today!</h3>
 
 				<a href="#requestBetaModal" id="requestBeta" class="btn-cta request-beta-btn btn-cta-2">Request Private Beta</a>
 			</div>
@@ -196,8 +222,12 @@
 	<!-- /Modal -->
 
 
+<!-- load jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 <script src="js/jquery.leanModal.min.js"></script>
 <script src="js/nebulab.js"></script>
+
 
 <script>
 	//Google Analytics snippet
