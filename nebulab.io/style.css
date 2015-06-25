@@ -635,7 +635,7 @@ body {
 }
 .pain-point-content p {
 	color: #fff;
-	font-size: 1.25em;
+	font-size: 1.125em;
 	margin: 0 auto;
 	max-width: 30.25em;
 	text-align: center;
@@ -654,7 +654,13 @@ body {
 	  padding: 7.5em 0 8.75em;
 	}
 }
-
+@media only screen and ( min-width: 35em ) {
+	.pain-point {
+		background-color: #4FB29B;
+	  margin: 0 auto;
+	  padding: 4.5em 4.25em 5.75em;
+	}
+}
 
 /*----------------------------------------------------------------------------
 
@@ -951,6 +957,7 @@ body {
 	z-index: 2;
 }
 a.modal_close {
+	border: none;
 	color: #696969;
 }
 @media only screen and ( min-width: 40em ) {
